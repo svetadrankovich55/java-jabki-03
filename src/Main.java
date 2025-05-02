@@ -1,123 +1,98 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import java.util.Random;
+
 
 public class Main {
-    private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        int[] numbers = new int[10];
-        String[] names = {"Ilya", "Elena", "Андрей"};
 
-        //System.out.println(numbers);
-
-        /*
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
-        }
+        /**
+         * Условный оператор if-else
          */
+/*
+        boolean isRain = true;
 
-        /*
-        for (String name : names) {
-            System.out.println(name);
+        System.out.println("Надеть куртку");
+        System.out.println("Надеть обувь");
+        System.out.println("Взять сумку");
+
+        if (isRain) {
+            System.out.println("Взять зонт");
         }
+
+       /* Long a = 1000L;
+        Long b = 1000L;
+
+        System.out.println(a.equals(b));*/
+        /*String animal = "Cat";
+        if (animal.equals("cat")) {
+            System.out.println("Мяу");
+        } else if (animal.equals("dog")) {
+            System.out.println("Гав");
+        } else {
+            System.out.println("Хрю");
+        }*/
+/*
+        int floor = 1;
+        double price = 3000;
+        if (floor == 1 && price < 3000) {
+            System.out.println("Подходит для аренды!");
+        }
+
+        // Тернарный оператор
+        int a = 0;
+        System.out.println(a > 0 ? "a положительное число" : "отрицательное число");
+
+        /**
+         * Условный оператор switch
          */
+    /*    String animal = "dog";
+        switch (animal) {
+            case "cat":
+                System.out.println("Мяу");
+                break;
+            case "dog":
+                System.out.println("Гав");
+                break;
+            case "fish":
+                System.out.println("Буль");
+                break;
+            case "bear":
+                System.out.println("rrrr");
+                break;
+            default:
+                System.out.println("Привет!");
 
-        // Запись значение
-        numbers[0] = 1;
-
-        // System.out.println(numbers[0]);
-        // System.out.println(names[1]);
-        // System.out.println(names.length);
-
-        // System.out.println(average(1000));
-        // System.out.println(averageV2(1000));
-
-        int[][] matrix = new int[10][10];
-        int[][] grid = {{1, 2}, {3, 4}};
-
-        // print(matrix);
-        // print(grid);
-
-        // printIndex(matrix);
-        // printIndex(grid);
-
-        int[][] data = createMatrix(100);
-        print(data);
-        sum(data);
-    }
-
-    // O(2n)
-    static int average(int size) {
-        int[] arr = new int[size];
-
-        // O(n)
-        for (int i = 0; i < size; i++) {
-            arr[i] = RANDOM.nextInt(100);
+        }
+        /**
+         * Циклы
+         */
+       /* for (int i = 0; i < 10; i++) {
+            System.out.println(i);
         }
 
-        int sum = 0;
-
-        // O(n)
-        for (int e : arr) {
-            sum += e;
+        int x = 0;
+        while (x < 10) {
+            System.out.println(x);
+            x++;
         }
 
-        return sum / size;
-    }
-
-    // O(n)
-    static int averageV2(int size) {
-        int[] arr = new int[size];
-        int sum = 0;
-
-        // O(n)
-        for (int i = 0; i < size; i++) {
-            arr[i] = RANDOM.nextInt(100);
-            sum += arr[i];
-        }
-
-
-        return sum / size;
-    }
-
-    static void print(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                //выход из цикла
+                break;
             }
-            System.out.println();
+            System.out.println(i);
         }
-        System.out.println();
-    }
 
-    static void printIndex(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.printf("(%s, %s)", i, j);
+        for (int i = 1; i < 10; i++) {
+            if (i % 2 != 0) {
+                //пропуск итерации
+                continue;
             }
-            System.out.println();
-        }
-        System.out.println();
-    }
+            System.out.println(i);
+        }*/
 
-    static int[][] createMatrix(int size) {
-        int[][] matrix = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                matrix[i][j] = RANDOM.nextInt(100);
-            }
-        }
-        return matrix;
-    }
 
-    static void sum(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
-            for (int j = 0; j < arr[i].length; j++) {
-                sum += arr[i][j];
-            }
-            System.out.printf("Строка %s: сумма = %s\n", i, sum);
-        }
     }
 }
