@@ -214,10 +214,10 @@ public class Main {
 
         // 2. Программа выводит описание оценки от 1 до 5
 
-        Scanner scanner2 = new Scanner(System.in);
+        //Scanner scanner2 = new Scanner(System.in);
 
         System.out.print("Введите оценку от 1 до 5: ");
-        int grade = scanner2.nextInt();
+        int grade = scanner1.nextInt();
 
         String description;
 
@@ -242,7 +242,7 @@ public class Main {
         }
 
         System.out.println(description);
-        scanner2.close();
+        scanner1.close();
 
 
         /**
@@ -302,14 +302,12 @@ public class Main {
 
         // 1. Найдите наименьшее число больше 100, которое делится на 7
 
-        int x = 100;
-        while (true) {
-            if (x % 7 == 0) {
-                System.out.println(x);
-                break;
-            }
+        int x = 101;
+        while (x % 7 != 0) {
             x++;
         }
+        System.out.println(x);
+
 
         // 2. Дано число n. Вычислите его факториал через цикл while
 
@@ -410,8 +408,3 @@ public class Main {
 
     }
 }
-
-
-
-
-
