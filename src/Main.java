@@ -323,9 +323,13 @@ public class Main {
 
         // 3. Дано число. Определите, является ли оно простым
 
-        int z = 5;
+        int z = 1;
         int h = 2;
         boolean isPrime = true;
+
+        if (z <= 1) {
+            isPrime = false;
+        }
 
         while (h < z) {
             if (z % h == 0) {
@@ -334,6 +338,7 @@ public class Main {
             }
             h++;
         }
+
         if (isPrime) {
             System.out.println("Число является простым");
         } else {
